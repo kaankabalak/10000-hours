@@ -1,0 +1,25 @@
+<div class="login">
+  <h1>Login</h1>
+  <form>
+    <div class="row">
+      <div class="left">
+        <label for="name">Username:</label>
+      </div>
+      <div class="right">
+        <input type="text" name="name" [(ngModel)]="user.name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <label for="password">Password:</label>
+      </div>
+      <div class="right">
+        <input type="password" name="password" [(ngModel)]="user.password">
+      </div>
+      <div class='red' *ngIf='incorrectPW'>The password you entered is incorrect</div>
+    </div>
+    <div class="row">
+      <button (click)="login()">Submit</button>
+    </div>
+  </form>
+</div>

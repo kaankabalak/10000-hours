@@ -1,0 +1,46 @@
+<div class="activity">
+    <i class="fa fa-arrow-left" aria-hidden="true" [routerLink]="['/expertise', activity.expertiseId]">
+      <a>To expertise</a>
+    </i>
+    <h1>Create an activity</h1>
+    <form>
+      <div class="row">
+        <div class="left">
+          <label for="name">Name:</label>
+        </div>
+        <div class="right">
+          <input type="text" name="name" 
+          required 
+          [(ngModel)]="activity.name"
+          #namefield="ngModel">
+        </div>
+      </div>
+      <div class="row">
+          <div class="left">
+            <label for="hours">Hours:</label>
+          </div>
+          <div class="right">
+            <input type="number" name="hours" 
+            required 
+            min="0" 
+            [(ngModel)]="activity.hours"
+            #hoursfield="ngModel">
+          </div>
+          <div class='red' *ngIf='incorrectPW'>The password you entered is incorrect</div>
+        </div>
+      <div class="row">
+        <div class="left">
+          <label for="description">Description:</label>
+        </div>
+        <div class="right">
+          <textarea rows="4" cols="35" name="description" [(ngModel)]="activity.description"></textarea>
+        </div>
+        <div class='blue' *ngIf='namefield.errors && namefield.dirty'>The name field is required</div>
+        <div class='blue' *ngIf='hoursfield.errors && hoursfield.dirty'>The hours field is required</div>
+      </div>
+      <div class="row">
+        <button *ngIf='namefield.errors || hoursfield.errors' (click)="submit()" disabled>Submit</button>
+        <button *ngIf='!namefield.errors && !hoursfield.errors' (click)="submit()">Submit</button>
+      </div>
+    </form>
+  </div>

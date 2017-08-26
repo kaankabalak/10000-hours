@@ -1,0 +1,8 @@
+.wrapper {
+    margin-top: 10px;
+    background-color: #2E313A;
+    padding: 10px;
+}
+h1, p {
+    color: white;
+}

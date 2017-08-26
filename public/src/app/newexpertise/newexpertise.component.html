@@ -1,0 +1,30 @@
+<div class="expertise">
+    <i class="fa fa-arrow-left" aria-hidden="true" [routerLink]="['/dashboard']">
+      <a>Back</a>
+    </i>
+    <h1>Create an expertise</h1>
+    <form>
+      <div class="row">
+        <div class="left">
+          <label for="name">Name:</label>
+        </div>
+        <div class="right">
+          <input type="text" name="name" 
+          required 
+          maxlength="25"
+          [(ngModel)]="expertise.name"
+          #namefield="ngModel">
+        </div>
+      </div>
+      <div class="row">
+        <div class="left">
+          <label for="description">Description:</label>
+        </div>
+        <div class="right">
+          <textarea rows="4" cols="35" name="description" [(ngModel)]="expertise.description"></textarea>
+        </div>
+        <div class='blue' *ngIf='namefield.errors && namefield.dirty'>The name should be a maximum of 25 characters</div>
+      </div>
+      <button (click)="submit()">Submit</button>
+    </form>
+  </div>

@@ -1,0 +1,71 @@
+.expertise {
+    margin-top: 10px;
+    background-color: #2E313A;
+    padding: 10px;
+}
+label {
+    font-size: 10pt;
+    display: block;
+    color: white;
+}
+h1, h2 {
+    margin-bottom: 5px;
+    color: white;
+}
+h1 {
+    margin-top: 25px;
+    display: inline-block;
+}
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    color: white;
+}
+.block {
+    display: block;
+}
+p {
+    color: white;
+}
+a {
+    margin-bottom: 10px;
+    display: block;
+}
+.activityItem {
+    background: #1F2229;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#activityLog {
+    display: inline;
+}
+.hours{
+    display: block;
+}
+.controls {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.fa-plus-square, .fa-pencil, .fa-trash-o{
+    color: #066098;
+    margin-left: 10px;
+}
+.fa-plus-square {
+    font-size: 16pt;
+}
+.fa-plus-square:hover, .fa-trash-o:hover, .fa-pencil:hover, .fa-arrow-left:hover {
+    color: #45A2E1;
+}
+.fa-arrow-left {
+    color: #1091E8;
+    font-size: 14pt;
+}
+i a {
+    display: inline;
+    font-size: 12pt;
+    font-weight: 700;
+}
+.editExpertise{
+    font-size: 18pt;
+}

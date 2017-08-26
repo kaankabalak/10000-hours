@@ -1,0 +1,32 @@
+<div class="expertise">
+
+  <i class="block fa fa-arrow-left" aria-hidden="true" [routerLink]="['/dashboard']">
+    <a>Back</a>
+  </i>
+
+  <h1>{{expertise.name}}</h1>
+  <div class="controls">  
+    <i class="editExpertise fa fa-pencil" title="Edit" aria-hidden="true" [routerLink]="['/editexpertise', parameter.id]"></i>
+  </div>
+
+  <h3 class="hours">{{hours}}/10000 hours</h3>
+
+  <p>{{expertise.description}}</p>
+
+  <h2 id="activityLog">Activity Log</h2>
+
+  <div class="controls">  
+    <i class="fa fa-plus-square" title="Add activity" aria-hidden="true" [routerLink]="['/newactivity', expertise.id]"></i> 
+  </div>
+
+  <div class="activityItem" *ngFor="let element of expertise.activities">
+    <h3>{{element.name}} ({{element.hours}} hours)</h3>
+    <div class="controls">  
+        <i class="fa fa-pencil" title="Edit" aria-hidden="true" [routerLink]="['/editactivity', element._id]"></i>
+        <i class="fa fa-trash-o" title="Delete" aria-hidden="true" (click)='deleteActivity(element._id)'></i>
+    </div>
+    <label>Logged on {{element.date | date:'shortDate'}}</label>
+    <p>{{element.description}}</p>
+  </div>
+
+</div>

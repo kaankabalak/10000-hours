@@ -1,0 +1,25 @@
+<div class="expertise">
+  <i class="fa fa-arrow-left" aria-hidden="true" [routerLink]="['/dashboard']">
+    <a>To dashboard</a>
+  </i>
+  <h1>Edit expertise</h1>
+  <form>
+    <div class="row">
+      <div class="left">
+        <label for="name">Name:</label>
+      </div>
+      <div class="right">
+        <input type="text" name="name" [(ngModel)]="expertise.name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <label for="description">Description:</label>
+      </div>
+      <div class="right">
+        <textarea rows="4" cols="35" name="description" [(ngModel)]="expertise.description"></textarea>
+      </div>
+    </div>
+    <button (click)="submit()">Submit</button>
+  </form>
+</div>

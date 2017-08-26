@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    background-color: #1F2229;
+}
+.active {
+    background-color: #2E313A !important;
+}

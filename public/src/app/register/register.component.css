@@ -1,0 +1,52 @@
+.login {
+    margin-top: 10px;
+    background-color: #2E313A;
+    padding: 10px;
+}
+.left {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    margin-left: 15px;
+}
+.right {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+}
+.row{
+    display: block;
+    margin-bottom: 5px;
+}
+label{
+    height: 22px; 
+    line-height: 25px; 
+    padding: 0;
+    color: white;
+}
+h1, p {
+    color: white;
+}
+h1 {
+    margin-bottom: 10px;
+}
+.blue {
+    margin-top: 4px;
+    color: #45A2E1;
+    margin-left: 15px;
+    font-size: 9pt;
+}
+button {
+    margin-top: 2px;
+    margin-left: 14px;
+    border: 0;
+    padding: 4px;
+    width: 284px;
+    font-size: 10pt;
+    background-color: #1091E8;
+    color: white;
+}
+button:disabled {
+    opacity: 0.65; 
+    cursor: not-allowed;
+}

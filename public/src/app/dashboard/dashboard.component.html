@@ -1,0 +1,20 @@
+<div class="dashboard">
+  <h3>Welcome, {{currentUser}}</h3>
+
+  <h1>Choose the expertise that you want to work on</h1>
+  <div class="element" *ngFor="let element of expertise; let i = index">
+    <h2><a [routerLink]="['/expertise', element._id]">{{element.name}}</a></h2> 
+    <div class="controls">
+        <i class="fa fa-plus-square" title="Add activity" aria-hidden="true" [routerLink]="['/newactivity', element._id]"></i>        
+        <i class="fa fa-pencil" title="Edit" aria-hidden="true" [routerLink]="['/editexpertise', element._id]"></i>
+        <i class="fa fa-trash-o" title="Delete" aria-hidden="true" (click)='deleteExpertise(element._id)'></i>
+    </div>
+
+    <p>({{hours[i]}}/10000 hours)</p>
+    
+  </div>
+  
+  <div class="newelement" [routerLink]="['/newexpertise']">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+  </div>
+</div>
