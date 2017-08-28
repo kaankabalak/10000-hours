@@ -18,9 +18,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this._cookieService.get('username');
-    if (this.currentUser != ''){
+    if(this.currentUser == undefined) {
+      console.log('UNDEFINED');
+    }
+    else if (this.currentUser != ''){
       console.log('You are already logged in! Redirecting to dashboard');
       this._router.navigate(['/dashboard']);
+    } else{
+      console.log('not logged in');
     }
   }
 

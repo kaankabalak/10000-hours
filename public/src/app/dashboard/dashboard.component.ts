@@ -26,8 +26,9 @@ export class DashboardComponent implements OnInit {
   
   ngOnInit() {
     this.currentUser = this._cookieService.get('username');
+    console.log("dashboard current user is", this.currentUser);
     this.user.name = this.currentUser;
-    if (this.currentUser == ''){
+    if (this.currentUser == '' || this.currentUser == undefined){
       console.log('You are not logged in! Redirecting to login');
       this._router.navigate(['/login']);
     }
